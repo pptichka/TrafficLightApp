@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-3R-KfF">
-                                <rect key="frame" x="120" y="63" width="150" height="498"/>
+                                <rect key="frame" x="120" y="67" width="150" height="498"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-x2-XMv">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="RfZ-BK-9Ri" firstAttribute="height" secondItem="wkG-aD-3ds" secondAttribute="height" multiplier="0.253333" id="AWR-WF-dDv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RfZ-BK-9Ri" secondAttribute="bottom" constant="50" id="jpB-6n-vkC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnJ-3R-KfF" secondAttribute="trailing" multiplier="390/270" id="opM-hL-XFn"/>
-                            <constraint firstItem="dnJ-3R-KfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="qUe-Gy-ufl"/>
+                            <constraint firstItem="dnJ-3R-KfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qUe-Gy-ufl"/>
                             <constraint firstItem="dnJ-3R-KfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" multiplier="120/390" id="yuZ-FD-nlC"/>
                         </constraints>
                     </view>
