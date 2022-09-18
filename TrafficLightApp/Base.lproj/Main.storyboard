@@ -44,7 +44,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfZ-BK-9Ri">
                                 <rect key="frame" x="134.66666666666666" y="722" width="121" height="38"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="ZmV-qk-nP6"/>
                                 </constraints>
@@ -53,6 +53,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="trafficLightButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvK-bo-xFB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,6 +69,12 @@
                             <constraint firstItem="dnJ-3R-KfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" multiplier="120/390" id="yuZ-FD-nlC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenTrafficLight" destination="wkG-aD-3ds" id="dAB-Ms-qhQ"/>
+                        <outlet property="redTrafficLight" destination="2hi-x2-XMv" id="lOj-BD-TrA"/>
+                        <outlet property="trafficLightButton" destination="RfZ-BK-9Ri" id="TWv-Vn-nez"/>
+                        <outlet property="yellowTrafficLight" destination="KsG-U8-9PF" id="ASe-qd-nre"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,9 +82,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,11 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var redTrafficLight: UIView!
+    @IBOutlet var yellowTrafficLight: UIView!
+    @IBOutlet var greenTrafficLight: UIView!
+    @IBOutlet var trafficLightButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        redTrafficLight.alpha = 0.3
+        yellowTrafficLight.alpha = 0.3
+        greenTrafficLight.alpha = 0.3
+        
+        redTrafficLight.layer.cornerRadius = 75
+        yellowTrafficLight.layer.cornerRadius = 75
+        greenTrafficLight.layer.cornerRadius = 75
+        trafficLightButton.layer.cornerRadius = 15
     }
-
-
+    
+    @IBAction func trafficLightButtonDidTapped() {
+    }
 }
 
