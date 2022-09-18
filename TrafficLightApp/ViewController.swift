@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var redTrafficLight: UIView!
     @IBOutlet var yellowTrafficLight: UIView!
     @IBOutlet var greenTrafficLight: UIView!
@@ -28,7 +28,21 @@ class ViewController: UIViewController {
     
     @IBAction func trafficLightButtonDidTapped() {
         trafficLightButton.setTitle("NEXT", for: .normal)
+        redTrafficLight.alpha = 1
+        
+        if redTrafficLight.alpha == 1 {
+            redTrafficLight.alpha = 0.3
+            yellowTrafficLight.alpha = 1
+            greenTrafficLight.alpha = 0.3
+        } else if yellowTrafficLight.alpha == 1 {
+            redTrafficLight.alpha = 0.3
+            yellowTrafficLight.alpha = 0.3
+            greenTrafficLight.alpha = 1
+        } else if greenTrafficLight.alpha == 1 {
+            redTrafficLight.alpha = 1
+            yellowTrafficLight.alpha = 0.3
+            greenTrafficLight.alpha = 1
+        }
     }
-
 }
 
