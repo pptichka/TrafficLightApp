@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var greenTrafficLight: UIView!
     @IBOutlet var trafficLightButton: UIButton!
     
+    var trafficLight = TrafficLights.red
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         redTrafficLight.alpha = 0.3
@@ -28,21 +30,30 @@ class ViewController: UIViewController {
     
     @IBAction func trafficLightButtonDidTapped() {
         trafficLightButton.setTitle("NEXT", for: .normal)
-        redTrafficLight.alpha = 1
         
-        if redTrafficLight.alpha == 1 {
+        switch trafficLight {
+        case .red:
+            redTrafficLight.alpha = 1
+            yellowTrafficLight.alpha = 0.3
+            greenTrafficLight.alpha = 0.3
+        case .yellow:
             redTrafficLight.alpha = 0.3
             yellowTrafficLight.alpha = 1
             greenTrafficLight.alpha = 0.3
-        } else if yellowTrafficLight.alpha == 1 {
+        case .green:
             redTrafficLight.alpha = 0.3
             yellowTrafficLight.alpha = 0.3
             greenTrafficLight.alpha = 1
-        } else if greenTrafficLight.alpha == 1 {
-            redTrafficLight.alpha = 1
-            yellowTrafficLight.alpha = 0.3
-            greenTrafficLight.alpha = 1
         }
+        
+        trafficLight = TrafficLights.yellow
+        trafficLight = TrafficLights.green
     }
+}
+
+enum TrafficLights {
+    case red
+    case yellow
+    case green
 }
 
