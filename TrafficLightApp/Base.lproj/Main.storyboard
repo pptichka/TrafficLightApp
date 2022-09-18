@@ -42,15 +42,15 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfZ-BK-9Ri">
-                                <rect key="frame" x="134.66666666666666" y="722" width="121" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfZ-BK-9Ri">
+                                <rect key="frame" x="134.66666666666666" y="722.66666666666663" width="121" height="37.333333333333371"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="ZmV-qk-nP6"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -62,7 +62,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RfZ-BK-9Ri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8kA-KS-3aa"/>
-                            <constraint firstItem="RfZ-BK-9Ri" firstAttribute="height" secondItem="wkG-aD-3ds" secondAttribute="height" multiplier="0.253333" id="AWR-WF-dDv"/>
+                            <constraint firstItem="RfZ-BK-9Ri" firstAttribute="width" secondItem="dnJ-3R-KfF" secondAttribute="height" multiplier="121:498" id="jVS-Jh-zTy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RfZ-BK-9Ri" secondAttribute="bottom" constant="50" id="jpB-6n-vkC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnJ-3R-KfF" secondAttribute="trailing" multiplier="390/270" id="opM-hL-XFn"/>
                             <constraint firstItem="dnJ-3R-KfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qUe-Gy-ufl"/>

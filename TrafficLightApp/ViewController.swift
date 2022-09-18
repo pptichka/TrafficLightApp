@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func trafficLightButtonDidTapped() {
+        trafficLightButton.setTitle("NEXT", for: .normal)
     }
+
 }
 
