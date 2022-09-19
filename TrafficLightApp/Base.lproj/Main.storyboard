@@ -16,38 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-3R-KfF">
-                                <rect key="frame" x="120" y="67" width="150" height="498"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hi-x2-XMv">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="2hi-x2-XMv" secondAttribute="height" multiplier="1:1" id="NF5-3r-l3m"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsG-U8-9PF">
-                                        <rect key="frame" x="0.0" y="174" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="KsG-U8-9PF" secondAttribute="height" multiplier="1:1" id="ATz-L3-x7p"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkG-aD-3ds">
-                                        <rect key="frame" x="0.0" y="348" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="wkG-aD-3ds" secondAttribute="height" multiplier="1:1" id="YUr-c2-HWM"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfZ-BK-9Ri">
-                                <rect key="frame" x="134.66666666666666" y="722.66666666666663" width="121" height="37.333333333333371"/>
+                                <rect key="frame" x="152.66666666666666" y="722.66666666666663" width="84.666666666666657" height="37.333333333333371"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37.333333333333371" id="8NM-YE-Tne"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="ZmV-qk-nP6"/>
+                                    <constraint firstAttribute="width" secondItem="RfZ-BK-9Ri" secondAttribute="height" multiplier="84:37" id="rKn-3O-8dY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
@@ -58,28 +31,47 @@
                                     <action selector="trafficLightButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dvK-bo-xFB"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-LC-ifY">
+                                <rect key="frame" x="145" y="114" width="100" height="398"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lv-Vw-Xps">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-Rf-AeC">
+                                        <rect key="frame" x="0.0" y="149" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCn-eq-fuB">
+                                        <rect key="frame" x="0.0" y="298" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5lv-Vw-Xps" secondAttribute="height" multiplier="1:1" id="BDa-px-fOL"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RfZ-BK-9Ri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8kA-KS-3aa"/>
-                            <constraint firstItem="RfZ-BK-9Ri" firstAttribute="width" secondItem="dnJ-3R-KfF" secondAttribute="height" multiplier="121:498" id="jVS-Jh-zTy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RfZ-BK-9Ri" secondAttribute="bottom" constant="50" id="jpB-6n-vkC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnJ-3R-KfF" secondAttribute="trailing" multiplier="390/270" id="opM-hL-XFn"/>
-                            <constraint firstItem="dnJ-3R-KfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="qUe-Gy-ufl"/>
-                            <constraint firstItem="dnJ-3R-KfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" multiplier="120/390" id="yuZ-FD-nlC"/>
+                            <constraint firstItem="bMv-LC-ifY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.471564" id="7tf-oi-Qau"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RfZ-BK-9Ri" secondAttribute="bottom" constant="50" id="KC1-KM-zcT"/>
+                            <constraint firstItem="bMv-LC-ifY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NBW-72-vXB"/>
+                            <constraint firstItem="RfZ-BK-9Ri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WaP-eR-oFd"/>
+                            <constraint firstItem="bMv-LC-ifY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="WpL-3H-EiV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenTrafficLight" destination="wkG-aD-3ds" id="dAB-Ms-qhQ"/>
-                        <outlet property="redTrafficLight" destination="2hi-x2-XMv" id="lOj-BD-TrA"/>
+                        <outlet property="greenTrafficLight" destination="oCn-eq-fuB" id="bpe-UF-og3"/>
+                        <outlet property="redTrafficLight" destination="5lv-Vw-Xps" id="dHP-Zc-RCj"/>
                         <outlet property="trafficLightButton" destination="RfZ-BK-9Ri" id="TWv-Vn-nez"/>
-                        <outlet property="yellowTrafficLight" destination="KsG-U8-9PF" id="ASe-qd-nre"/>
+                        <outlet property="yellowTrafficLight" destination="XbU-Rf-AeC" id="fzL-6F-S5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="-55.580357142857139"/>
+            <point key="canvasLocation" x="-1329" y="-267"/>
         </scene>
     </scenes>
     <resources>

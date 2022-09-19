@@ -7,53 +7,63 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet var redTrafficLight: UIView!
-    @IBOutlet var yellowTrafficLight: UIView!
-    @IBOutlet var greenTrafficLight: UIView!
-    @IBOutlet var trafficLightButton: UIButton!
-    
-    var trafficLight = TrafficLights.red
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        redTrafficLight.alpha = 0.3
-        yellowTrafficLight.alpha = 0.3
-        greenTrafficLight.alpha = 0.3
-        
-        redTrafficLight.layer.cornerRadius = 75
-        yellowTrafficLight.layer.cornerRadius = 75
-        greenTrafficLight.layer.cornerRadius = 75
-        trafficLightButton.layer.cornerRadius = 15
-    }
-    
-    @IBAction func trafficLightButtonDidTapped() {
-        trafficLightButton.setTitle("NEXT", for: .normal)
-        
-        switch trafficLight {
-        case .red:
-            redTrafficLight.alpha = 1
-            yellowTrafficLight.alpha = 0.3
-            greenTrafficLight.alpha = 0.3
-        case .yellow:
-            redTrafficLight.alpha = 0.3
-            yellowTrafficLight.alpha = 1
-            greenTrafficLight.alpha = 0.3
-        case .green:
-            redTrafficLight.alpha = 0.3
-            yellowTrafficLight.alpha = 0.3
-            greenTrafficLight.alpha = 1
-        }
-        
-        trafficLight = TrafficLights.yellow
-        trafficLight = TrafficLights.green
-    }
-}
-
 enum TrafficLights {
     case red
     case yellow
     case green
 }
+
+class ViewController: UIViewController {
+    
+    @IBOutlet var redTrafficLight: UIView!
+    @IBOutlet var yellowTrafficLight: UIView!
+    @IBOutlet var greenTrafficLight: UIView!
+    
+    @IBOutlet var trafficLightButton: UIButton!
+    
+    private var trafficLight = TrafficLights.red
+    private let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.3
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        redTrafficLight.alpha = lightIsOff
+        yellowTrafficLight.alpha = lightIsOff
+        greenTrafficLight.alpha = lightIsOff
+        
+        redTrafficLight.layer.cornerRadius = redTrafficLight.frame.width / 2
+        yellowTrafficLight.layer.cornerRadius = yellowTrafficLight.frame.width / 2
+        greenTrafficLight.layer.cornerRadius = greenTrafficLight.frame.width / 2
+        
+        trafficLightButton.layer.cornerRadius = 15
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redTrafficLight.layer.cornerRadius = redTrafficLight.frame.width / 2
+        yellowTrafficLight.layer.cornerRadius = yellowTrafficLight.frame.width / 2
+        greenTrafficLight.layer.cornerRadius = greenTrafficLight.frame.width / 2
+    }
+    
+    @IBAction func trafficLightButtonDidTapped() {
+            trafficLightButton.setTitle("NEXT", for: .normal)
+        
+        switch trafficLight {
+        case .red:
+            redTrafficLight.alpha = lightIsOn
+            greenTrafficLight.alpha = lightIsOff
+            trafficLight = .yellow
+        case .yellow:
+            redTrafficLight.alpha = lightIsOff
+            yellowTrafficLight.alpha = lightIsOn
+            trafficLight = .green
+        case .green:
+            yellowTrafficLight.alpha = lightIsOff
+            greenTrafficLight.alpha = lightIsOn
+            trafficLight = .red
+        }
+    }
+}
+
+
 
